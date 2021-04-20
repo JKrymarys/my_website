@@ -6,8 +6,10 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "lint-staged",
-    "prepare": "husky install"
+    "lint-staged": "lint-staged",
+    "prepare": "husky install",
+    "prettier": "prettier **/* --write --ignore-unknown",
+    "lint": "eslint '**/*.{js,jsx,ts,tsx}' --cache --fix"
   },
   "dependencies": {
     "next": "latest",
