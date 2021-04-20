@@ -1,5 +1,36 @@
 import Head from 'next/head'
 
+import NavButton from 'components/NavButton'
+import { LinkProps } from 'utils/types'
+
+const links: LinkProps[] = [
+  // {
+  //   label: "About me",
+  //   path: "/about",
+  // },
+  // {
+  //   label: "Projects",
+  //   path: "/projects",
+  // },
+  // {
+  //   label: "Experience",
+  //   path: "/experience",
+  // },
+  // {
+  //   label: "Skills",
+  //   path: "/skills",
+  // },
+  // },
+  {
+    label: 'Github',
+    path: 'https://github.com/JKrymarys',
+  },
+  {
+    label: 'LinkedIn',
+    path: 'https://www.linkedin.com/in/jkrymarys/',
+  },
+]
+
 export default function Home() {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen py-2">
@@ -8,8 +39,16 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className="flex flex-col items-center justify-center flex-1 px-20 text-center">
-        <h1> Hello </h1>
+      <main className="flex flex-col items-center justify-center flex-1 w-full px-20 text-center">
+        <div className="absolute top-10">
+          <h1 className="text-3xl"> Hello! I&apos;m Kuba! </h1>
+          <h2> JavaScript developer with 3 year commercial experience</h2>
+        </div>
+        <div className="flex flex-col items-center justify-center flex-1 w-full px-20 text-center">
+          {links.map((link: LinkProps, id: number) => (
+            <NavButton link={link} id={id} key={id} />
+          ))}
+        </div>
       </main>
 
       <footer className="flex items-center justify-center w-full h-24 border-t">
