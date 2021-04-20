@@ -8,14 +8,12 @@ export default function Layout({ children }: any) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className="flex flex-col items-center justify-center flex-1 w-full px-20 text-center">
-        <div className="absolute top-10">
+      <main className="flex flex-col items-center flex-start flex-1 w-full px-20 text-center">
+        <div className="w-full border-b h-24">
           <h1 className="text-3xl"> Hello! I&apos;m Kuba! </h1>
           <h2> JavaScript developer with 3 year commercial experience</h2>
         </div>
-        <div className="flex flex-col items-center justify-center flex-1 w-full px-20 text-center">
-          {children}
-        </div>
+        {children}
       </main>
 
       <footer className="flex items-center justify-center w-full h-24 border-t">

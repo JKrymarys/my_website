@@ -1,14 +1,14 @@
 import Head from 'next/head'
 
-import Layout from 'components/Layout'
+import PageLayout from 'components/PageLayout'
 
 export default function About() {
   return (
-    <Layout>
+    <PageLayout>
       <Head>
         <title>Projects</title>
       </Head>
       <h1>Projects</h1>
-    </Layout>
+    </PageLayout>
   )
 }
