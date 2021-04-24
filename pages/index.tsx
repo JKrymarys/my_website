@@ -41,9 +41,11 @@ export default function Home() {
       <Head>
         <title>JK - link hub</title>
       </Head>
-      {links.map((link: LinkProps, id: number) => (
-        <NavButton link={link} key={id} />
-      ))}
+      <div className="flex flex-col justify-start items-center">
+        {links.map((link: LinkProps, id: number) => (
+          <NavButton link={link} key={id} />
+        ))}
+      </div>
     </>
   )
 }

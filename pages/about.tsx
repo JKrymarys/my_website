@@ -1,10 +1,8 @@
 import Head from 'next/head'
 
-import PageLayout from 'components/PageLayout'
-
 export default function About() {
   return (
-    <PageLayout>
+    <div>
       <Head>
         <title>About me</title>
       </Head>
@@ -28,6 +26,6 @@ export default function About() {
           officia deserunt mollit anim id est laborum.
         </p>
       </div>
-    </PageLayout>
+    </div>
   )
 }
