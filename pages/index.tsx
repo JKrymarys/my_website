@@ -2,17 +2,16 @@ import Head from 'next/head'
 
 import NavButton from 'components/NavButton'
 import { LinkProps } from 'utils/types'
-import Layout from 'components/Layout'
 
 const links: LinkProps[] = [
   {
     label: 'About me',
     path: '/about',
   },
-  {
-    label: 'Projects',
-    path: '/projects',
-  },
+  // {
+  //   label: 'Projects',
+  //   path: '/projects',
+  // },
   // {
   //   label: "Experience",
   //   path: "/experience",
@@ -22,6 +21,10 @@ const links: LinkProps[] = [
   //   path: "/skills",
   // },
   // },
+  {
+    label: 'Contact me',
+    path: '/contact',
+  },
   {
     label: 'Github',
     path: 'https://github.com/JKrymarys',
@@ -34,13 +37,13 @@ const links: LinkProps[] = [
 
 export default function Home() {
   return (
-    <Layout>
+    <>
       <Head>
         <title>JK - link hub</title>
       </Head>
       {links.map((link: LinkProps, id: number) => (
         <NavButton link={link} key={id} />
       ))}
-    </Layout>
+    </>
   )
 }
