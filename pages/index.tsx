@@ -5,25 +5,20 @@ import { LinkProps } from 'utils/types'
 
 const links: LinkProps[] = [
   {
-    label: 'About me',
-    path: '/about',
+    label: 'Projects',
+    path: '/projects',
   },
-  // {
-  //   label: 'Projects',
-  //   path: '/projects',
-  // },
   // {
   //   label: "Experience",
   //   path: "/experience",
   // },
-  // {
-  //   label: "Skills",
-  //   path: "/skills",
-  // },
-  // },
+  {
+    label: 'Skills',
+    path: '/skills',
+  },
   {
     label: 'Contact me',
-    path: '/contact',
+    path: 'mailto:kuba@jkrymarys.me',
   },
   {
     label: 'Github',

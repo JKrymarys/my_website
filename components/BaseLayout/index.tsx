@@ -13,14 +13,25 @@ export default function BaseLayout({ children }: any) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <header className="flex flex-col justify-center w-full h-32 text-center border-b">
-        <h1 className="text-3xl"> Hello! I&apos;m Kuba! </h1>
-        <h2> JavaScript developer with 3 year commercial experience</h2>
+        <h1 className="text-2xl my-4"> Hello! I&apos;m Kuba! </h1>
+        <h2> JS dev with 3 year commercial experience</h2>
+        <h2>
+          {' '}
+          Lodz, Poland{' '}
+          <span role="img" aria-label="polish-flag">
+            🇵🇱
+          </span>{' '}
+          / remote{' '}
+          <span role="img" aria-label="globe-icon">
+            🌐
+          </span>
+        </h2>
       </header>
 
       <main>{children}</main>
 
       {!home && (
-        <div>
+        <div className="flex justify-center items-center w-full h-16 text-center border-b">
           <Link href="/">
             <a>← Back to home</a>
           </Link>
