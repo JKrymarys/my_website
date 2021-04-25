@@ -28,7 +28,7 @@ export default function BaseLayout({ children }: any) {
         </h2>
       </header>
 
-      <main>{children}</main>
+      <main className="mx-auto w-full lg:w-8/12 ">{children}</main>
 
       {!home && (
         <div className="flex justify-center items-center w-full h-16 text-center border-b">

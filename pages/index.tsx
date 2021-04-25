@@ -12,10 +12,10 @@ const links: LinkProps[] = [
   //   label: "Experience",
   //   path: "/experience",
   // },
-  {
-    label: 'Skills',
-    path: '/skills',
-  },
+  // {
+  //   label: 'Skills',
+  //   path: '/skills',
+  // },
   {
     label: 'Contact me',
     path: 'mailto:kuba@jkrymarys.me',
