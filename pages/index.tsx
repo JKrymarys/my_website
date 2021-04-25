@@ -34,7 +34,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>JK - link hub</title>
+        <title>jkrymarys - website</title>
       </Head>
       <div className="flex flex-col justify-start items-center">
         {links.map((link: LinkProps, id: number) => (

@@ -2,6 +2,14 @@ import Head from 'next/head'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 
+/* eslint-disable jsx-a11y/accessible-emoji */
+
+const EmojiWrapper = ({ children, label }: any) => (
+  <span className="mx-2" role="img" aria-label={label}>
+    {children}
+  </span>
+)
+
 export default function BaseLayout({ children }: any) {
   const router = useRouter()
   const home = router.pathname === '/'
@@ -9,22 +17,20 @@ export default function BaseLayout({ children }: any) {
   return (
     <div className="min-h-screen py-2 bg-yellow-50 bg-opacity-25">
       <Head>
-        <title> My website </title>
+        <title>jkrymarys - website </title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <header className="flex flex-col justify-center w-full h-32 text-center border-b">
-        <h1 className="text-2xl my-4"> Hello! I&apos;m Kuba! </h1>
-        <h2> JS dev with 3 year commercial experience</h2>
+      <header className="flex flex-col justify-center w-full h-32 text-center border-b p-4">
+        <h1 className="text-2xl my-2">
+          Hello
+          <EmojiWrapper label="waving-hand">👋</EmojiWrapper>
+          I&apos;m Kuba!
+        </h1>
+        <h2>Frontend developer - JS/TS, React.js</h2>
         <h2>
-          {' '}
-          Lodz, Poland{' '}
-          <span role="img" aria-label="polish-flag">
-            🇵🇱
-          </span>{' '}
-          / remote{' '}
-          <span role="img" aria-label="globe-icon">
-            🌐
-          </span>
+          Lodz, Poland
+          <EmojiWrapper label="polish-flag">🇵🇱</EmojiWrapper>/ remote
+          <EmojiWrapper label="globe-icon">🌐</EmojiWrapper>
         </h2>
       </header>
 
@@ -38,8 +44,9 @@ export default function BaseLayout({ children }: any) {
         </div>
       )}
 
-      <footer className="flex items-center justify-center w-full h-24 border-t">
-        Kuba Krymarys @ {new Date().getFullYear()}
+      <footer className="flex flex-col items-center justify-center w-full h-24 border-t">
+        <div>Kuba Krymarys @ {new Date().getFullYear()}</div>
+        <a href="/">jkrymarys.pl</a>
       </footer>
     </div>
   )
