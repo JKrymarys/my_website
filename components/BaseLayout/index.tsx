@@ -27,6 +27,8 @@ export default function BaseLayout({ children }: any) {
           I&apos;m Kuba!
         </h1>
         <h2>Frontend developer - JS/TS, React.js</h2>
+        <h2>Freelance - business websites, online stores</h2>
+
         <h2>
           Lodz, Poland
           <EmojiWrapper label="polish-flag">🇵🇱</EmojiWrapper>/ remote
