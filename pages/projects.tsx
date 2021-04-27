@@ -51,7 +51,7 @@ export default function Projects() {
   return (
     <>
       <Head>
-        <title>JK - link hub</title>
+        <title>Projects - jkrymarys.pl</title>
       </Head>
       <div className="flex flex-col justify-center items-center">
         <h2 className="m-4 text-xl">Freelance projects</h2>
