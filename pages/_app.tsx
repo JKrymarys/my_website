@@ -9,7 +9,7 @@ import useDisplayDesktopVersion from 'utils/useDisplayDesktopVersion'
 import BaseLayout from 'components/BaseLayout'
 import DesktopLayout from 'components/DesktopLayout'
 
-import 'components/PhoneLayout/devices.min.css'
+import 'components/DesktopLayout/devices.min.css'
 
 function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter()
