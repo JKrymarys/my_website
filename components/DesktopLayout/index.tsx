@@ -62,7 +62,7 @@ export default function DesktopLayout({ children }: any) {
               <EmojiWrapper label="globe-icon">🌐</EmojiWrapper>
             </h2>
           </header>
-          <main className="mx-auto w-full lg:w-8/12 overflow-y-auto">{children}</main>
+          <main className="mx-auto w-full l overflow-y-auto">{children}</main>
 
           {!home && (
             <div className="flex justify-center items-center w-full h-16 text-center border-b">
