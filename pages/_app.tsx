@@ -1,5 +1,3 @@
-import 'tailwindcss/tailwind.css'
-
 import { useEffect } from 'react'
 import { AppProps } from 'next/app'
 import { useRouter } from 'next/router'
@@ -9,7 +7,7 @@ import useDisplayDesktopVersion from 'utils/useDisplayDesktopVersion'
 import BaseLayout from 'components/BaseLayout'
 import DesktopLayout from 'components/DesktopLayout'
 
-import 'components/DesktopLayout/devices.min.css'
+import 'styles/globals.css'
 
 function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter()
