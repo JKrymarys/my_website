@@ -1,14 +1,19 @@
-import 'tailwindcss/tailwind.css'
-
 import { useEffect } from 'react'
 import { AppProps } from 'next/app'
 import { useRouter } from 'next/router'
-import * as gtag from '../utils/gtag'
+import * as gtag from 'utils/gtag'
+import useDisplayDesktopVersion from 'utils/useDisplayDesktopVersion'
 
 import BaseLayout from 'components/BaseLayout'
+import DesktopLayout from 'components/DesktopLayout'
+
+import 'styles/globals.css'
 
 function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter()
+  const displayDesktopVersion = useDisplayDesktopVersion()
+
+  const Layout = displayDesktopVersion ? DesktopLayout : BaseLayout
 
   useEffect(() => {
     const handleRouteChange = (url: URL) => {
@@ -21,9 +26,9 @@ function MyApp({ Component, pageProps }: AppProps) {
   }, [router.events])
 
   return (
-    <BaseLayout>
+    <Layout>
       <Component {...pageProps} />{' '}
-    </BaseLayout>
+    </Layout>
   )
 }
 
