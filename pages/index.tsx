@@ -17,6 +17,10 @@ const links: LinkProps[] = [
   //   path: '/skills',
   // },
   {
+    label: 'Articles',
+    path: '/articles',
+  },
+  {
     label: 'Contact me',
     path: 'mailto:kuba@jkrymarys.me',
   },
