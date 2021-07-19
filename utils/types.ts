@@ -10,3 +10,9 @@ export interface Project {
   link?: string
   github?: string
 }
+
+export interface BlogPost {
+  type: 'external' | 'internal'
+  link: string
+  title: string
+}
