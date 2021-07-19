@@ -23,7 +23,7 @@ export default function Articles() {
         <h2 className="m-4 text-xl">Blog posts</h2>
         <div className="w-full divide-y divide-grey-400 items-start">
           {posts.map((item: BlogPost, id: number) => (
-            <BlogPostItem blogPostItem={item} key={id} />
+            <BlogPostItem item={item} key={id} />
           ))}
         </div>
       </div>
