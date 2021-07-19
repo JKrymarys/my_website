@@ -42,7 +42,8 @@ export default function Home() {
       </Head>
       <div className="flex flex-col justify-start items-center">
         {links.map((link: LinkProps, id: number) => (
-          <NavButton link={link} key={id} />
+          // eslint-disable-next-line react/jsx-key
+          <NavButton link={link} index={id} />
         ))}
       </div>
     </>
