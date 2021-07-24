@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
 
+import { links } from 'utils/constants';
 import DesktopNavbar from './DesktopNavbar';
 
 /* eslint-disable jsx-a11y/accessible-emoji */
@@ -42,8 +43,10 @@ export default function DesktopLayout({ children }: any) {
 
   useEffect(() => {
     const { route } = router;
+    const defaultPath = links.find((x) => x.default)?.path || links[0].path || '/';
+
     if (route === '/') {
-      router.push('/projects');
+      router.push(defaultPath);
     }
   }, [router.route]);
 

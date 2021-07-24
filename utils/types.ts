@@ -1,6 +1,7 @@
 export interface LinkProps {
   label: string;
   path: string;
+  default?: boolean;
 }
 
 export interface Project {

@@ -2,8 +2,9 @@ import { LinkProps } from './types';
 
 export const links: LinkProps[] = [
   {
-    label: 'Projects',
-    path: '/projects',
+    label: 'Portfolio',
+    path: '/portfolio',
+    default: true,
   },
   // {
   //   label: "Experience",
