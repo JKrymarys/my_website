@@ -1,7 +1,7 @@
-import Head from 'next/head'
+import Head from 'next/head';
 
-import BlogPostItem from 'components/BlogPostItem'
-import { BlogPost } from 'utils/types'
+import BlogPostItem from 'components/BlogPostItem';
+import { BlogPost } from 'utils/types';
 
 const posts: BlogPost[] = [
   {
@@ -11,7 +11,7 @@ const posts: BlogPost[] = [
     title:
       'Jak zabezpieczyć projekt przed przypadkowymi błędami przy użyciu narzędzi ESLint, Prettier i Husky',
   },
-]
+];
 
 export default function Articles() {
   return (
@@ -28,5 +28,5 @@ export default function Articles() {
         </div>
       </div>
     </>
-  )
+  );
 }

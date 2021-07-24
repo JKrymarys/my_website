@@ -1,13 +1,13 @@
-import { Project } from 'utils/types'
+import { Project } from 'utils/types';
 
 interface ProjectItemProps {
-  projectItem: Project
+  projectItem: Project;
 }
 
 export default function ProjectItem({
   projectItem: { title, description, stack, link, github },
 }: ProjectItemProps) {
-  const isAnyLink = link || github
+  const isAnyLink = link || github;
   return (
     <div className="p-4 w-full">
       <h3 className="font-semibold text-justify"> {title}</h3>
@@ -37,5 +37,5 @@ export default function ProjectItem({
         </div>
       )}
     </div>
-  )
+  );
 }

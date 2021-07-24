@@ -1,6 +1,6 @@
-import Head from 'next/head'
-import Link from 'next/link'
-import { useRouter } from 'next/router'
+import Head from 'next/head';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
 
 /* eslint-disable jsx-a11y/accessible-emoji */
 
@@ -8,11 +8,11 @@ const EmojiWrapper = ({ children, label }: any) => (
   <span className="mx-2" role="img" aria-label={label}>
     {children}
   </span>
-)
+);
 
 export default function BaseLayout({ children }: any) {
-  const router = useRouter()
-  const home = router.pathname === '/'
+  const router = useRouter();
+  const home = router.pathname === '/';
 
   return (
     <div className="min-h-screen py-2 bg-yellow-50 bg-opacity-25">
@@ -51,5 +51,5 @@ export default function BaseLayout({ children }: any) {
         <a href="/">jkrymarys.pl</a>
       </footer>
     </div>
-  )
+  );
 }

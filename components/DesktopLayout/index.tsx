@@ -1,8 +1,8 @@
-import { useEffect } from 'react'
-import Head from 'next/head'
-import { useRouter } from 'next/router'
+import { useEffect } from 'react';
+import Head from 'next/head';
+import { useRouter } from 'next/router';
 
-import DesktopNavbar from './DesktopNavbar'
+import DesktopNavbar from './DesktopNavbar';
 
 /* eslint-disable jsx-a11y/accessible-emoji */
 
@@ -10,7 +10,7 @@ const EmojiWrapper = ({ children, label }: any) => (
   <span className="mx-2" role="img" aria-label={label}>
     {children}
   </span>
-)
+);
 
 function Phone({ children }: any) {
   return (
@@ -34,18 +34,18 @@ function Phone({ children }: any) {
         {children}
       </div>
     </div>
-  )
+  );
 }
 
 export default function DesktopLayout({ children }: any) {
-  const router = useRouter()
+  const router = useRouter();
 
   useEffect(() => {
-    const { route } = router
+    const { route } = router;
     if (route === '/') {
-      router.push('/projects')
+      router.push('/projects');
     }
-  }, [router.route])
+  }, [router.route]);
 
   return (
     <div className="min-h-screen py-2 bg-yellow-50 bg-opacity-25">
@@ -57,7 +57,7 @@ export default function DesktopLayout({ children }: any) {
         <header
           className="flex flex-col justify-center w-full h-32 text-center border-b p-4 mt-6"
           onClick={() => {
-            router.push('/')
+            router.push('/');
           }}
         >
           <h1 className="text-2xl my-2">
@@ -85,5 +85,5 @@ export default function DesktopLayout({ children }: any) {
         </footer>
       </div>
     </div>
-  )
+  );
 }

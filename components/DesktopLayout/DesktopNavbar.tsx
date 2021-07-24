@@ -1,8 +1,8 @@
-import Head from 'next/head'
+import Head from 'next/head';
 
-import NavButton from 'components/NavButton'
-import { LinkProps } from 'utils/types'
-import { links } from 'utils/constants'
+import NavButton from 'components/NavButton';
+import { LinkProps } from 'utils/types';
+import { links } from 'utils/constants';
 
 export default function DesktopNavbar() {
   return (
@@ -17,5 +17,5 @@ export default function DesktopNavbar() {
         ))}
       </div>
     </>
-  )
+  );
 }

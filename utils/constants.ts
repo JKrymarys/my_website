@@ -1,4 +1,4 @@
-import { LinkProps } from './types'
+import { LinkProps } from './types';
 
 export const links: LinkProps[] = [
   {
@@ -29,4 +29,4 @@ export const links: LinkProps[] = [
     label: 'LinkedIn',
     path: 'https://www.linkedin.com/in/jkrymarys/',
   },
-]
+];

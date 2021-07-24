@@ -1,10 +1,10 @@
-import Link from 'next/link'
+import Link from 'next/link';
 
-import { LinkProps } from 'utils/types'
+import { LinkProps } from 'utils/types';
 
 interface NavButtonProps {
-  link: LinkProps
-  index: number
+  link: LinkProps;
+  index: number;
 }
 
 export default function NavButton({ link: { path, label }, index }: NavButtonProps) {
@@ -14,5 +14,5 @@ export default function NavButton({ link: { path, label }, index }: NavButtonPro
         {label}
       </a>
     </Link>
-  )
+  );
 }

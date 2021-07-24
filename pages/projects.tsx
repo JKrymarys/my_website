@@ -1,7 +1,7 @@
-import Head from 'next/head'
+import Head from 'next/head';
 
-import ProjectItem from 'components/ProjectItem'
-import { Project } from 'utils/types'
+import ProjectItem from 'components/ProjectItem';
+import { Project } from 'utils/types';
 
 const freelanceProjects: Project[] = [
   {
@@ -26,7 +26,7 @@ const freelanceProjects: Project[] = [
     title: 'Web application supporting statutory meetings of student’s organisation',
     stack: ['Ionic', 'React', 'Firebase', 'PWA'],
   },
-]
+];
 
 const commercialProjects: Project[] = [
   {
@@ -45,7 +45,7 @@ const commercialProjects: Project[] = [
     title: 'Cross Platform (iOS/Android) application for scheduling workshops',
     stack: ['C#', 'Xamarin'],
   },
-]
+];
 
 export default function Projects() {
   return (
@@ -68,5 +68,5 @@ export default function Projects() {
         </div>
       </div>
     </>
-  )
+  );
 }

@@ -1,12 +1,12 @@
-import Head from 'next/head'
+import Head from 'next/head';
 
-import NavButton from 'components/NavButton'
-import { LinkProps } from 'utils/types'
-import { links } from 'utils/constants'
-import useDisplayDesktopVersion from 'utils/useDisplayDesktopVersion'
+import NavButton from 'components/NavButton';
+import { LinkProps } from 'utils/types';
+import { links } from 'utils/constants';
+import useDisplayDesktopVersion from 'utils/useDisplayDesktopVersion';
 
 export default function Home() {
-  const displayDesktopVersion = useDisplayDesktopVersion()
+  const displayDesktopVersion = useDisplayDesktopVersion();
 
   return (
     <>
@@ -21,5 +21,5 @@ export default function Home() {
           ))}
       </div>
     </>
-  )
+  );
 }

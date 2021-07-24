@@ -1,7 +1,7 @@
-import { BlogPost } from 'utils/types'
+import { BlogPost } from 'utils/types';
 
 interface BlogPostItemProps {
-  item: BlogPost
+  item: BlogPost;
 }
 
 export default function BlogPostItem({ item: { title, link } }: BlogPostItemProps) {
@@ -11,5 +11,5 @@ export default function BlogPostItem({ item: { title, link } }: BlogPostItemProp
         {title}
       </a>
     </div>
-  )
+  );
 }
