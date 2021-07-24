@@ -16,9 +16,7 @@ export default function BaseLayout({ children }: any) {
       </Head>
       <header className="flex flex-col justify-center w-full h-34 text-center border-b p-2">
         <h1 className="text-2xl my-2">
-          Hello
-          <EmojiWrapper label="waving-hand" emoji="👋" />
-          I&apos;m Kuba!
+          Hello <EmojiWrapper label="waving-hand" emoji="👋" /> I&apos;m Kuba!
         </h1>
         <h2>Frontend developer - JS/TS, React.js</h2>
         <h2>Freelance - business websites, online stores</h2>
