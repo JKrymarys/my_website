@@ -1,5 +1,5 @@
+import { useEffect } from 'react'
 import Head from 'next/head'
-import Link from 'next/link'
 import { useRouter } from 'next/router'
 
 import DesktopNavbar from './DesktopNavbar'
@@ -40,6 +40,13 @@ function Phone({ children }: any) {
 export default function DesktopLayout({ children }: any) {
   const router = useRouter()
 
+  useEffect(() => {
+    const { route } = router
+    if (route === '/') {
+      router.push('/projects')
+    }
+  }, [router.route])
+
   return (
     <div className="min-h-screen py-2 bg-yellow-50 bg-opacity-25">
       <Head>
@@ -47,7 +54,12 @@ export default function DesktopLayout({ children }: any) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className="flex flex-col justify-between items-center">
-        <header className="flex flex-col justify-center w-full h-32 text-center border-b p-4 mt-6">
+        <header
+          className="flex flex-col justify-center w-full h-32 text-center border-b p-4 mt-6"
+          onClick={() => {
+            router.push('/')
+          }}
+        >
           <h1 className="text-2xl my-2">
             Hello
             <EmojiWrapper label="waving-hand">👋</EmojiWrapper>
