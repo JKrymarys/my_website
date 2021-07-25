@@ -16,10 +16,10 @@ export default function BaseLayout({ children }: any) {
       </Head>
       <header className="flex flex-col justify-center w-full h-34 text-center border-b p-2">
         <h1 className="text-2xl my-2">
-          Hello <EmojiWrapper label="waving-hand" emoji="👋" /> I&apos;m Kuba!
+          Hello <EmojiWrapper label="waving-hand" emoji="👋" /> I&apos;m Jacob!
         </h1>
         <h2>Frontend developer - JS/TS, React.js</h2>
-        <h2>Freelance - business websites, online stores</h2>
+        <h2>business websites, ecommerce</h2>
         <h2>
           Lodz, Poland <EmojiWrapper label="polish-flag" emoji="🇵🇱" />
           <br /> remote <EmojiWrapper label="globe-icon" emoji="🌐" />
@@ -37,7 +37,7 @@ export default function BaseLayout({ children }: any) {
       )}
 
       <footer className="flex flex-col items-center justify-center w-full h-24 border-t">
-        <div>Kuba Krymarys @ {new Date().getFullYear()}</div>
+        <div>Jakub Krymarys @ {new Date().getFullYear()}</div>
         <a href="/">jkrymarys.pl</a>
       </footer>
     </div>
