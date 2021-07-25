@@ -35,7 +35,7 @@ export default function DesktopLayout({ children }: any) {
             Hello <EmojiWrapper label="waving-hand" emoji="👋" /> I&apos;m Jacob!
           </h1>
           <h2>Frontend developer - JS/TS, React.js</h2>
-          <h2>Freelance - business websites, online stores</h2>
+          <h2>business websites, ecommerce</h2>
 
           <h2>
             Lodz, Poland <EmojiWrapper label="polish-flag" emoji="🇵🇱" />
