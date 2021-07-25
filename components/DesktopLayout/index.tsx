@@ -32,9 +32,7 @@ export default function DesktopLayout({ children }: any) {
           }}
         >
           <h1 className="text-2xl my-2">
-            Hello
-            <EmojiWrapper label="waving-hand" emoji="👋" />
-            I&apos;m Kuba!
+            Hello <EmojiWrapper label="waving-hand" emoji="👋" /> I&apos;m Kuba!
           </h1>
           <h2>Frontend developer - JS/TS, React.js</h2>
           <h2>Freelance - business websites, online stores</h2>
