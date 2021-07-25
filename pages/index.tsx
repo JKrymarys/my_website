@@ -1,51 +1,25 @@
-import Head from 'next/head'
+import Head from 'next/head';
 
-import NavButton from 'components/NavButton'
-import { LinkProps } from 'utils/types'
-
-const links: LinkProps[] = [
-  {
-    label: 'Projects',
-    path: '/projects',
-  },
-  // {
-  //   label: "Experience",
-  //   path: "/experience",
-  // },
-  // {
-  //   label: 'Skills',
-  //   path: '/skills',
-  // },
-  {
-    label: 'Articles',
-    path: '/articles',
-  },
-  {
-    label: 'Contact me',
-    path: 'mailto:kuba@jkrymarys.me',
-  },
-  {
-    label: 'Github',
-    path: 'https://github.com/JKrymarys',
-  },
-  {
-    label: 'LinkedIn',
-    path: 'https://www.linkedin.com/in/jkrymarys/',
-  },
-]
+import NavButton from 'components/NavButton';
+import { LinkProps } from 'utils/types';
+import { links } from 'utils/constants';
+import useDisplayDesktopVersion from 'utils/useDisplayDesktopVersion';
 
 export default function Home() {
+  const displayDesktopVersion = useDisplayDesktopVersion();
+
   return (
     <>
       <Head>
         <title>Hello - jkrymarys.pl</title>
       </Head>
       <div className="flex flex-col justify-start items-center">
-        {links.map((link: LinkProps, id: number) => (
-          // eslint-disable-next-line react/jsx-key
-          <NavButton link={link} index={id} />
-        ))}
+        {!displayDesktopVersion &&
+          links.map((link: LinkProps, id: number) => (
+            // eslint-disable-next-line react/jsx-key
+            <NavButton link={link} index={id} />
+          ))}
       </div>
     </>
-  )
+  );
 }

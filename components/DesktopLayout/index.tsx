@@ -1,43 +1,22 @@
-import Head from 'next/head'
-import Link from 'next/link'
-import { useRouter } from 'next/router'
+import { useEffect } from 'react';
+import Head from 'next/head';
+import { useRouter } from 'next/router';
 
-/* eslint-disable jsx-a11y/accessible-emoji */
-
-const EmojiWrapper = ({ children, label }: any) => (
-  <span className="mx-2" role="img" aria-label={label}>
-    {children}
-  </span>
-)
-
-function Phone({ children }: any) {
-  return (
-    <div className="marvel-device iphone-x">
-      <div className="notch">
-        <div className="camera"></div>
-        <div className="speaker"></div>
-      </div>
-      <div className="top-bar"></div>
-      <div className="sleep"></div>
-      <div className="bottom-bar"></div>
-      <div className="volume"></div>
-      <div className="overflow">
-        <div className="shadow shadow--tr"></div>
-        <div className="shadow shadow--tl"></div>
-        <div className="shadow shadow--br"></div>
-        <div className="shadow shadow--bl"></div>
-      </div>
-      <div className="inner-shadow"></div>
-      <div className="screen" style={{ overflow: 'scroll' }}>
-        {children}
-      </div>
-    </div>
-  )
-}
+import { links } from 'utils/constants';
+import DesktopNavbar from './DesktopNavbar';
+import EmojiWrapper from 'utils/EmojiWrapper';
 
 export default function DesktopLayout({ children }: any) {
-  const router = useRouter()
-  const home = router.pathname === '/'
+  const router = useRouter();
+
+  useEffect(() => {
+    const { route } = router;
+    const defaultPath = links.find((x) => x.default)?.path || links[0].path || '/';
+
+    if (route === '/') {
+      router.push(defaultPath);
+    }
+  }, [router.route]);
 
   return (
     <div className="min-h-screen py-2 bg-yellow-50 bg-opacity-25">
@@ -45,39 +24,34 @@ export default function DesktopLayout({ children }: any) {
         <title>jkrymarys - website </title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className="flex justify-center items-center">
-        <Phone>
-          <header className="flex flex-col justify-center w-full h-32 text-center border-b p-4 mt-6">
-            <h1 className="text-2xl my-2">
-              Hello
-              <EmojiWrapper label="waving-hand">👋</EmojiWrapper>
-              I&apos;m Kuba!
-            </h1>
-            <h2>Frontend developer - JS/TS, React.js</h2>
-            <h2>Freelance - business websites, online stores</h2>
+      <div className="flex flex-col justify-between items-center">
+        <header
+          className="flex flex-col justify-center w-full h-33 text-center border-b p-2 mt-2"
+          onClick={() => {
+            router.push('/');
+          }}
+        >
+          <h1 className="text-2xl my-2">
+            Hello <EmojiWrapper label="waving-hand" emoji="👋" /> I&apos;m Kuba!
+          </h1>
+          <h2>Frontend developer - JS/TS, React.js</h2>
+          <h2>Freelance - business websites, online stores</h2>
 
-            <h2>
-              Lodz, Poland
-              <EmojiWrapper label="polish-flag">🇵🇱</EmojiWrapper>/ remote
-              <EmojiWrapper label="globe-icon">🌐</EmojiWrapper>
-            </h2>
-          </header>
-          <main className="mx-auto w-full l overflow-y-auto">{children}</main>
+          <h2>
+            Lodz, Poland <EmojiWrapper label="polish-flag" emoji="🇵🇱" />
+            <br /> remote <EmojiWrapper label="globe-icon" emoji="🌐" />
+          </h2>
+        </header>
+        <main className="mx-auto w-9/12 l overflow-y-auto">
+          <DesktopNavbar />
+          {children}
+        </main>
 
-          {!home && (
-            <div className="flex justify-center items-center w-full h-16 text-center border-b">
-              <Link href="/">
-                <a>← Back to home</a>
-              </Link>
-            </div>
-          )}
-
-          <footer className="flex flex-col items-center justify-center w-full h-24 border-t">
-            <div>Kuba Krymarys @ {new Date().getFullYear()}</div>
-            <a href="/">jkrymarys.pl</a>
-          </footer>
-        </Phone>
+        <footer className="flex flex-col items-center justify-center w-full h-24 border-t">
+          <div>Kuba Krymarys @ {new Date().getFullYear()}</div>
+          <a href="/">jkrymarys.pl</a>
+        </footer>
       </div>
     </div>
-  )
+  );
 }

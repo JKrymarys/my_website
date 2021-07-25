@@ -1,18 +1,12 @@
-import Head from 'next/head'
-import Link from 'next/link'
-import { useRouter } from 'next/router'
+import Head from 'next/head';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
 
-/* eslint-disable jsx-a11y/accessible-emoji */
-
-const EmojiWrapper = ({ children, label }: any) => (
-  <span className="mx-2" role="img" aria-label={label}>
-    {children}
-  </span>
-)
+import EmojiWrapper from 'utils/EmojiWrapper';
 
 export default function BaseLayout({ children }: any) {
-  const router = useRouter()
-  const home = router.pathname === '/'
+  const router = useRouter();
+  const home = router.pathname === '/';
 
   return (
     <div className="min-h-screen py-2 bg-yellow-50 bg-opacity-25">
@@ -20,19 +14,15 @@ export default function BaseLayout({ children }: any) {
         <title>jkrymarys - website </title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <header className="flex flex-col justify-center w-full h-32 text-center border-b p-4">
+      <header className="flex flex-col justify-center w-full h-34 text-center border-b p-2">
         <h1 className="text-2xl my-2">
-          Hello
-          <EmojiWrapper label="waving-hand">👋</EmojiWrapper>
-          I&apos;m Kuba!
+          Hello <EmojiWrapper label="waving-hand" emoji="👋" /> I&apos;m Kuba!
         </h1>
         <h2>Frontend developer - JS/TS, React.js</h2>
         <h2>Freelance - business websites, online stores</h2>
-
         <h2>
-          Lodz, Poland
-          <EmojiWrapper label="polish-flag">🇵🇱</EmojiWrapper>/ remote
-          <EmojiWrapper label="globe-icon">🌐</EmojiWrapper>
+          Lodz, Poland <EmojiWrapper label="polish-flag" emoji="🇵🇱" />
+          <br /> remote <EmojiWrapper label="globe-icon" emoji="🌐" />
         </h2>
       </header>
 
@@ -51,5 +41,5 @@ export default function BaseLayout({ children }: any) {
         <a href="/">jkrymarys.pl</a>
       </footer>
     </div>
-  )
+  );
 }
