@@ -1,5 +1,3 @@
-import Head from 'next/head';
-
 import ProjectItem from 'components/ProjectItem';
 import { Project } from 'utils/types';
 
@@ -12,7 +10,7 @@ const freelanceProjects: Project[] = [
   },
   {
     title: 'Personal website',
-    stack: ['TypeScript', 'Next.js', 'Firebase', 'Tailwindcss'],
+    stack: ['TypeScript', 'Next.js', 'Firebase', 'Tailwind CSS'],
     link: 'http://jkrymarys.pl/',
     github: 'https://github.com/JKrymarys/my_website',
   },
@@ -31,7 +29,7 @@ const freelanceProjects: Project[] = [
 const commercialProjects: Project[] = [
   {
     title: 'Product data management system (web GUI)',
-    stack: ['vanilla JavaScript', 'Handlebars.js'],
+    stack: ['JavaScript', 'Handlebars.js'],
   },
   {
     title: 'Ordering process management web application',
@@ -50,9 +48,6 @@ const commercialProjects: Project[] = [
 export default function Projects() {
   return (
     <>
-      <Head>
-        <title>Projects - jkrymarys.pl</title>
-      </Head>
       <div className="flex flex-col justify-center items-center">
         <h2 className="m-4 text-xl">Freelance projects</h2>
         <div className="w-full  divide-y divide-grey-400 items-start">

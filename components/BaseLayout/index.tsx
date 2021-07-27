@@ -11,13 +11,11 @@ export default function BaseLayout({ children }: any) {
   return (
     <div className="min-h-screen py-2 bg-yellow-50 bg-opacity-25">
       <Head>
-        <title>jkrymarys - website </title>
+        <title>Jakub Krymarys</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <header className="flex flex-col justify-center w-full h-34 text-center border-b p-2">
-        <h1 className="text-2xl my-2">
-          Hello <EmojiWrapper label="waving-hand" emoji="👋" /> I&apos;m Jacob!
-        </h1>
+        <h1 className="text-2xl my-2">Jakub Krymarys</h1>
         <h2>Frontend developer - JS/TS, React.js</h2>
         <h2>business websites, ecommerce</h2>
         <h2>
