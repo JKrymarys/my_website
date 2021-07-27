@@ -1,4 +1,4 @@
-## My personal website created with Next.js + Tailwind CSS magic
+## Personal website created with Next.js + Tailwind CSS magic
 
 Tech stack:
 
