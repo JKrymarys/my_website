@@ -17,3 +17,10 @@ export interface BlogPost {
   link: string;
   title: string;
 }
+
+export interface CommercialExperience {
+  companyName: string;
+  start: string;
+  end: string;
+  description?: string;
+}
