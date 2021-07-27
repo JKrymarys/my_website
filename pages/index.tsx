@@ -11,7 +11,8 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Hello - jkrymarys.pl</title>
+        <title>Jakub Krymarys</title>
+        <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className="flex flex-col justify-start items-center">
         {!displayDesktopVersion &&

@@ -21,7 +21,7 @@ export default function DesktopLayout({ children }: any) {
   return (
     <div className="min-h-screen py-2 bg-yellow-50 bg-opacity-25">
       <Head>
-        <title>jkrymarys - website </title>
+        <title>Jakub Krymarys</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className="flex flex-col justify-between items-center">
@@ -31,9 +31,7 @@ export default function DesktopLayout({ children }: any) {
             router.push('/');
           }}
         >
-          <h1 className="text-2xl my-2">
-            Hello <EmojiWrapper label="waving-hand" emoji="👋" /> I&apos;m Jacob!
-          </h1>
+          <h1 className="text-2xl my-2">Jakub Krymarys</h1>
           <h2>Frontend developer - JS/TS, React.js</h2>
           <h2>business websites, ecommerce</h2>
 
