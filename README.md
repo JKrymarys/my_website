@@ -9,7 +9,3 @@ Tech stack:
 Features:
 
 - Google Analitics integration
-
-Credits:
-
-- iPhone CSS model - https://github.com/marvelapp/devices.css
