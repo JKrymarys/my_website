@@ -2,6 +2,10 @@ import { LinkProps } from './types';
 
 export const links: LinkProps[] = [
   {
+    label: 'Bio',
+    path: '/bio',
+  },
+  {
     label: 'Portfolio',
     path: '/portfolio',
     default: true,
