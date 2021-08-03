@@ -20,7 +20,7 @@ const experienceItems: CommercialExperience[] = [
     companyName: 'ABB',
     start: 'Mar 2017',
     end: 'Dec 2017',
-    description: 'Intern',
+    description: 'Internship',
   },
 ];
 
