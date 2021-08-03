@@ -3,6 +3,14 @@ import { Project } from 'utils/types';
 
 const freelanceProjects: Project[] = [
   {
+    title: 'Ecohouse v2',
+    description:
+      "[WIP] The idea behind this project is to recreate my thesis but with slightly different tech stack, conclusions from the first version and with much more experience that I've gained since I graduated.",
+    stack: ['Typescript', 'Node.js', 'AWS Lambda', 'AWS DynamoDB'],
+    link: 'https://jkrymarys.github.io/ecohouse_v2/',
+    github: 'https://github.com/JKrymarys/ecohouse_v2',
+  },
+  {
     title: 'Blue Ivy Boutique ',
     description: 'Business website and online shop',
     stack: ['Wordpress', 'Woocommerce'],
