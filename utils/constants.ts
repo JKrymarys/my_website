@@ -22,10 +22,10 @@ export const links: LinkProps[] = [
     label: 'Articles',
     path: '/articles',
   },
-  {
-    label: 'Contact me',
-    path: 'mailto:kuba@jkrymarys.me',
-  },
+  // {
+  //   label: 'Contact me',
+  //   path: 'mailto:kuba@jkrymarys.me',
+  // },
   {
     label: 'Github',
     path: 'https://github.com/JKrymarys',
