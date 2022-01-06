@@ -1,15 +1,20 @@
+import { ReactNode } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 
 import EmojiWrapper from 'utils/EmojiWrapper';
 
-export default function BaseLayout({ children }: any) {
+interface BaseLayoutProps {
+  children: ReactNode;
+}
+
+export default function BaseLayout({ children }: BaseLayoutProps): JSX.Element {
   const router = useRouter();
   const home = router.pathname === '/';
 
   return (
-    <div className="min-h-screen py-2 bg-yellow-50 bg-opacity-25">
+    <div className="min-h-screen py-2 bg-gray-800 text-slate-200">
       <Head>
         <title>Jakub Krymarys</title>
         <link rel="icon" href="/favicon.ico" />
@@ -36,7 +41,7 @@ export default function BaseLayout({ children }: any) {
 
       <footer className="flex flex-col items-center justify-center w-full h-24 border-t">
         <div>Jakub Krymarys @ {new Date().getFullYear()}</div>
-        <a href="/">jkrymarys.pl</a>
+        <Link href="/">jkrymarys.pl</Link>
       </footer>
     </div>
   );

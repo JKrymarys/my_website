@@ -1,12 +1,19 @@
+import { ReactNode } from 'react';
 import { useEffect } from 'react';
 import Head from 'next/head';
+import Link from 'next/link';
+
 import { useRouter } from 'next/router';
 
 import { links } from 'utils/constants';
 import DesktopNavbar from './DesktopNavbar';
 import EmojiWrapper from 'utils/EmojiWrapper';
 
-export default function DesktopLayout({ children }: any) {
+interface DesktopLayoutProps {
+  children: ReactNode;
+}
+
+export default function DesktopLayout({ children }: DesktopLayoutProps): JSX.Element {
   const router = useRouter();
 
   useEffect(() => {
@@ -16,10 +23,10 @@ export default function DesktopLayout({ children }: any) {
     if (route === '/') {
       router.push(defaultPath);
     }
-  }, [router.route]);
+  }, [router]);
 
   return (
-    <div className="min-h-screen py-2 bg-yellow-50 bg-opacity-25">
+    <div className="min-h-screen py-2 bg-gray-800 text-slate-200">
       <Head>
         <title>Jakub Krymarys</title>
         <link rel="icon" href="/favicon.ico" />
@@ -27,9 +34,7 @@ export default function DesktopLayout({ children }: any) {
       <div className="flex flex-col justify-between items-center">
         <header
           className="flex flex-col justify-center w-full h-33 text-center border-b p-2 mt-2"
-          onClick={() => {
-            router.push('/');
-          }}
+          onClick={() => router.push('/')}
         >
           <h1 className="text-2xl my-2">Jakub Krymarys</h1>
           <h2>Frontend developer - JS/TS, React.js</h2>
@@ -47,7 +52,7 @@ export default function DesktopLayout({ children }: any) {
 
         <footer className="flex flex-col items-center justify-center w-full h-24 border-t">
           <div>Jakub Krymarys @ {new Date().getFullYear()}</div>
-          <a href="/">jkrymarys.pl</a>
+          <Link href="/">jkrymarys.pl</Link>
         </footer>
       </div>
     </div>
