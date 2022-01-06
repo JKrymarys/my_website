@@ -9,7 +9,7 @@ export default function BaseLayout({ children }: any) {
   const home = router.pathname === '/';
 
   return (
-    <div className="min-h-screen py-2 bg-yellow-50 bg-opacity-25">
+    <div className="min-h-screen py-2 bg-gray-900 text-slate-50">
       <Head>
         <title>Jakub Krymarys</title>
         <link rel="icon" href="/favicon.ico" />

@@ -16,10 +16,10 @@ export default function DesktopLayout({ children }: any) {
     if (route === '/') {
       router.push(defaultPath);
     }
-  }, [router.route]);
+  }, [router]);
 
   return (
-    <div className="min-h-screen py-2 bg-yellow-50 bg-opacity-25">
+    <div className="min-h-screen py-2 bg-gray-900 text-slate-50">
       <Head>
         <title>Jakub Krymarys</title>
         <link rel="icon" href="/favicon.ico" />
@@ -27,9 +27,7 @@ export default function DesktopLayout({ children }: any) {
       <div className="flex flex-col justify-between items-center">
         <header
           className="flex flex-col justify-center w-full h-33 text-center border-b p-2 mt-2"
-          onClick={() => {
-            router.push('/');
-          }}
+          onClick={() => router.push('/')}
         >
           <h1 className="text-2xl my-2">Jakub Krymarys</h1>
           <h2>Frontend developer - JS/TS, React.js</h2>
